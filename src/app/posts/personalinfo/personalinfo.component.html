@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div
+  class="search-results"
+  infinite-scroll
+  (scrolled)="onScrollDown($event)"
+  (scrolledUp)="onScrollUp($event)"
+>
+  <div class="list-group">
+    <div
+      *ngFor="let person of personslist"
+      class="list-group-item list-group-item-action">
+      <div class="card_container">
+        <div class="card__image">
+          <img src="{{ person.picture }}" alt="sample" />
+        </div>
+        <div>
+          <p class="card__description">{{ person.description }}</p>
+        </div>
+      </div>
+      <div class="card_needs">
+          <div class="card__review">
+              <button class="review_btn"><img src="../../../assets/images/A_perfect_SVG_heart.svg.png" alt="like"><span>{{ person.likes }} Likes</span></button>
+          </div>
+          <div class="card__date">
+              <p>{{ person.joining_date.toString().split(' ',5).join(" ") }}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

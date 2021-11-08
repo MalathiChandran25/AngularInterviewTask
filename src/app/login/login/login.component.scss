@@ -1,0 +1,117 @@
+.login_container{
+    width: 100%;
+    height: 100vh;
+    background: transparent linear-gradient(90deg, #6A11CB 0%, #424CE8 59%, #3F50EA 63%, #2575FC 100%) 0% 0% no-repeat padding-box;
+}
+.login{  
+    width: 50%;  
+    margin: 0;  
+    padding: 80px;   
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    @media screen and (max-width: 768px){
+        width: 100%;
+        padding: 20px;
+    }
+} 
+
+.form-group {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin: 0px;
+    border-bottom: 2px solid grey;
+    margin-top: 30px;
+    &__btn {
+        border: none;
+        margin: 20px 0px;
+        text-align: center;
+    }
+}
+
+// click before enable input field
+.clickText {
+    font-size: 24px;
+    .form-control {
+        display: none;
+    }
+}
+
+// click after enable input field
+.typeText {
+    font-size: 16px;
+    .form-control {
+        display: block;
+        padding: 5px;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
+.login_label {
+    width: 100%;
+}
+
+.changepassword {
+    margin-top: 30px;
+    color: #6A11CB;
+    text-align: center;
+}
+.signup{
+    color: #6A11CB;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-btn {
+    background: transparent linear-gradient(90deg, #6A11CB 0%, #424CE8 59%, #3F50EA 63%, #2575FC 100%) 0% 0% no-repeat padding-box;
+    width: 115px;
+    border-radius: 4px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+button:disabled {
+    background: grey;
+}
+
+button[aria-label="Close"]:focus {
+    outline: none;
+}
+
+.changepassword a,.signup a {
+    cursor: pointer;
+}
+
+.error_mgs {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:active {
+    border: 0px;
+    outline: 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+.close_btn {
+    float: right;
+    margin: 20px 10px 0px 0px;
+    background: none;
+    /* outline: none; */
+    border: 0px;
+}
+

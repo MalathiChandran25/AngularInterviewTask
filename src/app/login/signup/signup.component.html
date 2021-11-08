@@ -1,0 +1,112 @@
+<div class="signup_container">
+    <div class="signup">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div *ngIf="viewLoginCredential">
+            <div class="form-group">
+                <label class="login_label" class="typeText">
+                Email <br>
+                <input type="text" name="email" formControlName="email" class="form-control"> 
+                </label>
+            </div>
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="error_mgs">
+                <div *ngIf="f['email'].errors">Please, enter valid email address.</div>
+            </div>
+            <div class="form-group">
+                <label class="login_label" class="typeText">
+                Password<br>
+                <input type="password" name="password" formControlName="password" class="form-control">
+                </label>
+            </div>
+            <div *ngIf="f['password'].touched && f['password'].invalid" class="error_mgs">
+                <div *ngIf="f['password'].errors">
+                    Password is required
+                  </div>
+            </div>
+        </div>
+            <div class="form-group">
+                <label class="login_label" class="typeText">
+                UserName <br>
+                <input type="text" name="username" formControlName="username" class="form-control"> 
+                </label>
+            </div>
+            <div *ngIf="f['username'].touched && f['username'].invalid" class="error_mgs">
+                <div *ngIf="f['username'].errors">Please, enter valid username.</div>
+            </div>
+            <div class="form-group">
+                <label class="signup_label" class="typeText">
+                Photo :<br>
+                <input type="file" name="photo" id="file" class="form-control" (change)="onImageChange($event)"> 
+                <input type="hidden" name="fileHidden" class="form-control" formControlName="imageInput"/>
+                </label>
+            </div>
+            <div *ngIf="f['photo'].touched && f['photo'].invalid" class="error_mgs">
+                <div *ngIf="f['photo']['errors']">Please, enter valid photo address.</div>
+            </div>
+            <div class="form-group">
+                <label class="signup_label" class="typeText">
+                Date of Birth :<br>
+                <input id="requestdate" placeholder="YYYY-MM-DD" name="requestdate" type="date" class="form-control" formControlName="requestdate" />
+                </label>
+            </div>
+            <div *ngIf="f['requestdate'].touched && f['requestdate'].invalid" class="error_mgs">
+                <div *ngIf="f['requestdate']['errors']?.['required']">Date of Birth is required</div>
+                <!-- <div *ngIf="f['requestdate']['errors']?.['pattern']">Date of Birth must be a valid date in the format YYYY-MM-DD</div> -->
+            </div>
+            <div class="form-group">
+                <label class="signup_label" class="typeText" (keypress)="keyPressNumbers($event)">
+                Phone Number :<br>
+                <input type="text" name="phoneno" formControlName="phoneno" class="form-control">
+                </label>
+            </div>
+            <div *ngIf="f['phoneno'].touched && f['phoneno'].invalid" class="error_mgs">
+                <div *ngIf="f['phoneno']['errors']?.['required']">Please, enter phoneno.</div>
+                <div *ngIf="f['phoneno']['errors']?.['pattern']">Please, enter valid phoneno (10 digits).</div>
+            </div>
+            <div formGroupName="address">
+                <h3 class="addr_heading">Address</h3>
+                <div class="form-group address">
+                    <label class="signup_label" class="typeText">
+                        Street<br>
+                        <input id="street" type="text" formControlName="street" class="form-control">
+                    </label>
+                </div>
+                <div *ngIf="f['address'].get('street')?.touched && f['address'].get('street')?.invalid" class="error_mgs">
+                    <div *ngIf="f['address'].get('street')?.['errors']?.['required']">Please, enter street name.</div>
+                </div>
+                <div class="form-group">
+                    <label class="signup_label" class="typeText">
+                        City<br>
+                        <input id="city" type="text" formControlName="city" class="form-control">
+                    </label>
+                </div>
+                <div *ngIf="f['address'].get('city')?.touched && f['address'].get('city')?.invalid" class="error_mgs">
+                    <div *ngIf="f['address'].get('city')?.['errors']?.['required']">Please, enter city.</div>
+                    <div *ngIf="f['address'].get('city')?.['errors']?.['pattern']">Please, enter valid city (only alphabets).</div>
+                </div>
+                <div class="form-group">
+                    <label class="signup_label" class="typeText">
+                        State<br>
+                        <input id="state" type="text" formControlName="state" class="form-control">
+                    </label>
+                </div>
+                <div *ngIf="f['address'].get('state')?.touched && f['address'].get('state')?.invalid" class="error_mgs">
+                    <div *ngIf="f['address'].get('state')?.['errors']?.['required']">Please, enter state.</div>
+                    <div *ngIf="f['address'].get('state')?.['errors']?.['pattern']">Please, enter valid state (only alphabets).</div>
+                </div>
+                <div class="form-group">
+                    <label class="signup_label" class="typeText">
+                        Zip Code<br>
+                        <input id="zip" type="text" formControlName="zip" class="form-control" (keypress)="keyPressNumbers($event)">
+                    </label>
+                </div>
+                <div *ngIf="f['address'].get('zip')?.touched &&f['address'].get('zip')?.invalid" class="error_mgs">
+                    <div *ngIf="f['address'].get('zip')?.['errors']?.['required']">Please, enter Zip.</div>
+                    <div *ngIf="f['address'].get('zip')?.['errors']?.['pattern']">Please, enter valid Zip (6 digits).</div>
+                </div>
+            </div>
+            <div class="form-group__btn">
+                <button type="submit" class="signup-btn" [disabled]="">signup</button>
+            </div>
+        </form>
+    </div>
+</div>

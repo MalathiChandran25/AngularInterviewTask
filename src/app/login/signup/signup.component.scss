@@ -1,0 +1,95 @@
+.signup_container{
+    width: 100%;
+    padding: 50px 0px;
+    background: transparent linear-gradient(90deg, #6A11CB 0%, #424CE8 59%, #3F50EA 63%, #2575FC 100%) 0% 0% no-repeat padding-box;
+}
+.signup{  
+    width: 50%;  
+    margin: 0 auto;  
+    padding: 20px;   
+    border-radius: 15px;
+    background-color: white; 
+    @media screen and (max-width: 767px){
+        width: 100%;
+        padding: 20px;
+    }
+}
+.addr_heading{
+    margin-top: 10px;
+}
+
+.form-group {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin: 0px;
+    border-bottom: 2px solid grey;
+    margin-top: 30px;
+    &__btn {
+        border: none;
+        margin: 20px 0px;
+        text-align: center;
+    }
+}
+.form-group.address{
+    margin-top: 5px !important;
+}
+// click after enable input field
+.typeText {
+    font-size: 16px;
+    .form-control {
+        display: block;
+        padding: 5px;
+        width: 100%;
+        margin-top: 5px;
+        font-size: 16px;
+    }
+}
+
+.signup_label {
+    width: 100%;
+}
+
+.signup-btn {
+    background: transparent linear-gradient(90deg, #6A11CB 0%, #424CE8 59%, #3F50EA 63%, #2575FC 100%) 0% 0% no-repeat padding-box;
+    width: 115px;
+    border-radius: 4px;
+    height: 40px;
+    /* outline: none; */
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+button:disabled {
+    background: grey;
+}
+
+button[aria-label="Close"]:focus {
+    outline: none;
+}
+
+.error_mgs {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:active {
+    border: 0px;
+    outline: 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+.close_btn {
+    float: right;
+    margin: 20px 10px 0px 0px;
+    background: none;
+    /* outline: none; */
+    border: 0px;
+}
+
