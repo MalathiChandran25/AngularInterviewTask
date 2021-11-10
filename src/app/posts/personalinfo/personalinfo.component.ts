@@ -34,7 +34,7 @@ export class PersonalinfoComponent implements OnInit {
         description: faker.lorem.paragraphs(2),
         picture: faker.image.avatar(),
         country: faker.address.country(),
-        joining_date: faker.date.recent(),
+        joining_date: faker.date.future(),
         likes: faker.random.number(),
       });
     }

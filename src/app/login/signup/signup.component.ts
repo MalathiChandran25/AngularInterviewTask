@@ -27,7 +27,7 @@ export class SignupComponent implements OnInit {
       email: ['',Validators.required],
       password:['',Validators.required],
       username: ['',Validators.required],
-      photo: [''],
+      photo: ['',Validators.required],
       imageInput : [''],
       requestdate: ['',[Validators.required]],
       phoneno: ['',[Validators.required,Validators.pattern("^[0-9]{10}$")]],

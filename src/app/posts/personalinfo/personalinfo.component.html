@@ -19,7 +19,8 @@
       </div>
       <div class="card_needs">
           <div class="card__review">
-              <button class="review_btn"><img src="../../../assets/images/A_perfect_SVG_heart.svg.png" alt="like"><span>{{ person.likes }} Likes</span></button>
+              <img src="../../../assets/images/A_perfect_SVG_heart.svg.png" alt="like" class="">
+              <p class="review_btn">{{ person.likes }} Likes</p>
           </div>
           <div class="card__date">
               <p>{{ person.joining_date.toString().split(' ',5).join(" ") }}</p>

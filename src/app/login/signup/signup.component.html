@@ -35,12 +35,12 @@
             <div class="form-group">
                 <label class="signup_label" class="typeText">
                 Photo :<br>
-                <input type="file" name="photo" id="file" class="form-control" (change)="onImageChange($event)"> 
+                <input type="file" name="photo" id="file" class="form-control" formControlName="photo" (change)="onImageChange($event)"> 
                 <input type="hidden" name="fileHidden" class="form-control" formControlName="imageInput"/>
                 </label>
             </div>
             <div *ngIf="f['photo'].touched && f['photo'].invalid" class="error_mgs">
-                <div *ngIf="f['photo']['errors']">Please, enter valid photo address.</div>
+                <div *ngIf="f['photo']['errors']">Please, enter valid photo.</div>
             </div>
             <div class="form-group">
                 <label class="signup_label" class="typeText">

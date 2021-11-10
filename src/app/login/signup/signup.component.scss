@@ -9,9 +9,13 @@
     padding: 20px;   
     border-radius: 15px;
     background-color: white; 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 676px){
         width: 100%;
         padding: 20px;
+    }
+    @media screen and (min-width: 676px) and (max-width: 1024px){
+        width: 70%;
+        padding: 50px;
     }
 }
 .addr_heading{
